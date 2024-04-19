@@ -1,0 +1,99 @@
+:root {
+  --background-color-light: #fff;
+  --text-color-light: #333;
+  --background-color-dark: #333;
+  --text-color-dark: #fff;
+  --card-bg-light: #ffffff;
+  --card-text-light: #333;
+  --card-bg-dark: #424242;
+  --card-text-dark: #e0e0e0;
+}
+
+body.light-mode {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  --card-bg: var(--card-bg-light);
+  --card-text: var(--card-text-light);
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  --card-bg: var(--card-bg-dark);
+  --card-text: var(--card-text-dark);
+}
+
+.theme-switch {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+input:checked + .slider:focus {
+  outline: none;
+}
+
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 10px;
+  overflow: hidden;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.card .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card .description {
+  color: var(--card-text);
+  opacity: 0.75;
+}

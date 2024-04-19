@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .note-yellow {
+    background-color: #fde047;
+  }
+  .note-blue {
+    background-color: #bfdbfe;
+  }
+  .note-pink {
+    background-color: #fbcfe8;
+  }
+  .note-green {
+    background-color: #bbf7d0;
+  }
+  .note-orange {
+    background-color: #fdba74;
+  }
+  .note-purple {
+    background-color: #e9d5ff;
+  }
+
+  .rotate-2 {
+    transform: rotate(2deg);
+  }
+  .rotate-3 {
+    transform: rotate(3deg);
+  }
+  .rotate-n2 {
+    transform: rotate(-2deg);
+  }
+  .rotate-n3 {
+    transform: rotate(-3deg);
+  }
+
+  .note-position {
+    width: 350px;
+    margin: 10px; /* This adds space between each sticky note */
+  }
+  .top-right {
+    top: 10px;
+    right: 10px;
+  }
+  .top-left {
+    top: 10px;
+    left: 10px;
+  }
+  .bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  .bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+}
